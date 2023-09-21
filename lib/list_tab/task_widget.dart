@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:projecttodo/list_tab/edit_list.dart';
 import 'package:projecttodo/my_theme.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class TaskWidget extends StatelessWidget {
   @override
@@ -19,7 +21,7 @@ class TaskWidget extends StatelessWidget {
             backgroundColor: MyTheme.redcolor,
             foregroundColor: MyTheme.whitecolor,
             icon: Icons.delete,
-            label: 'Delete',
+            label: AppLocalizations.of(context)!.delete,
           ),
         ],
       ),
@@ -47,7 +49,7 @@ class TaskWidget extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Title',
+                        AppLocalizations.of(context)!.title_task,
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium
@@ -57,7 +59,7 @@ class TaskWidget extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Des',
+                        AppLocalizations.of(context)!.des_task,
                         style: Theme.of(context).textTheme.titleSmall,
                       ),
                     ),

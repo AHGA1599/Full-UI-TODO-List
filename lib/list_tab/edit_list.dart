@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projecttodo/my_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class EditList extends StatefulWidget {
   static const String routeName = 'editList';
@@ -19,7 +20,7 @@ class _EditListState extends State<EditList> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'ToDoList',
+            AppLocalizations.of(context)!.titel,
             style: Theme.of(context).textTheme.titleLarge,
           ),
           toolbarHeight: 100,
@@ -35,7 +36,7 @@ class _EditListState extends State<EditList> {
             padding: const EdgeInsets.all(12.0),
             child: Column(
               children: [
-                Text('Edit Task',
+                Text(AppLocalizations.of(context)!.edit_task,
                     style: Theme.of(context).textTheme.titleMedium),
                 Form(
                   key: formkey,
@@ -52,7 +53,7 @@ class _EditListState extends State<EditList> {
                             return null;
                           },
                           decoration:
-                              InputDecoration(hintText: 'This is Title'),
+                              InputDecoration(hintText: AppLocalizations.of(context)!.title_chan),
                         ),
                       ),
                       Padding(
@@ -65,7 +66,7 @@ class _EditListState extends State<EditList> {
                             return null;
                           },
                           decoration: InputDecoration(
-                            hintText: 'Task Details',
+                            hintText: AppLocalizations.of(context)!.detail_chan,
                           ),
                           maxLines: 4,
                         ),
@@ -73,7 +74,7 @@ class _EditListState extends State<EditList> {
                       Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Text(
-                          'Select Date',
+                          AppLocalizations.of(context)!.select_date,
                           style: Theme.of(context).textTheme.titleSmall,
                         ),
                       ),
@@ -99,7 +100,7 @@ class _EditListState extends State<EditList> {
                             //save task to firebase
                             saveTask();
                           },
-                          child: Text('Save Changes',
+                          child: Text(AppLocalizations.of(context)!.save_changes,
                               style: Theme.of(context)
                                   .textTheme
                                   .titleMedium!

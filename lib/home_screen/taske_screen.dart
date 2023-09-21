@@ -55,7 +55,7 @@ class _TaskeScreenState extends State<TaskeScreen> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      'Select Date',
+                      AppLocalizations.of(context)!.select_date,
                       style: Theme.of(context).textTheme.titleSmall,
                     ),
                   ),
@@ -78,7 +78,7 @@ class _TaskeScreenState extends State<TaskeScreen> {
                       //add task to firebase
                       addTask();
                     },
-                    child: Text('Add',
+                    child: Text(AppLocalizations.of(context)!.add,
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium!
